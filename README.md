@@ -67,8 +67,8 @@ npm install
 npm start
 ```
 Your frontend app will be available at [http://localhost:3000](http://localhost:3000).
+![b6](https://github.com/user-attachments/assets/292bea3a-fc11-4341-affa-e2226df138d5)
 
-![Add New Book Page](https://source.unsplash.com/800x400/?library,writing)
 
 ## Project Structure
 

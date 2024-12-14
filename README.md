@@ -1,70 +1,144 @@
-# Getting Started with Create React App
+# Library Book Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a **Library Book Management System** that enables CRUD (Create, Read, Update, Delete) operations on a book collection in a library. It is built with React for the frontend and Node.js with MySQL for the backend.
+
+## Features
+
+- View all books available in the library.
+- Add new books to the collection.
+- Update existing book information.
+- Delete books from the collection.
+
+![Books Overview](https://source.unsplash.com/800x400/?library,books)
+
+## Prerequisites
+
+- Node.js installed on your system.
+- MySQL database running locally or on a server.
+- npm (Node Package Manager) for managing dependencies.
+
+## Getting Started
+
+### Clone the Repository
+```bash
+git clone <repository-url>
+cd library-book-management
+```
+
+### Backend Setup
+
+1. **Create MySQL Database**:
+   - Database Name: `test`
+   - Table Name: `books`
+   - Table Schema:
+     ```sql
+     CREATE TABLE books (
+         id INT AUTO_INCREMENT PRIMARY KEY,
+         title VARCHAR(255) NOT NULL,
+         `desc` TEXT,
+         price DECIMAL(10, 2),
+         cover VARCHAR(255)
+     );
+     ```
+
+2. **Install Backend Dependencies**:
+```bash
+cd backend
+npm install
+```
+
+3. **Run the Backend**:
+```bash
+node index.js
+```
+Your backend server will start on [http://localhost:8800](http://localhost:8800).
+
+### Frontend Setup
+
+1. **Install Frontend Dependencies**:
+```bash
+cd ../frontend
+npm install
+```
+
+2. **Run the Frontend**:
+```bash
+npm start
+```
+Your frontend app will be available at [http://localhost:3000](http://localhost:3000).
+
+![Add New Book Page](https://source.unsplash.com/800x400/?library,writing)
+
+## Project Structure
+
+### Backend
+- **index.js**: Contains API endpoints for managing books.
+- **MySQL Database**: Stores book information.
+
+### Frontend
+- **Books Component**: Displays the list of books.
+- **Add Component**: Form to add new books.
+- **Update Component**: Form to edit existing book details.
+
+![Book Details Page](https://source.unsplash.com/800x400/?bookshelf)
+
+## CRUD Operations
+
+### Add a New Book
+Navigate to the "Add New Book" page and fill in the form with the book's details. Click **Submit** to save the book to the database.
+
+### View Books
+The homepage lists all the books in the database. Each book displays its title, description, price, and cover image.
+
+### Update a Book
+Click the "Edit" button next to a book to update its details.
+
+### Delete a Book
+Click the "Delete" button to remove a book from the database.
 
 ## Available Scripts
 
-In the project directory, you can run:
-
 ### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Runs the app in development mode. Open [http://localhost:3000](http://localhost:3000) to view in the browser. The page reloads if you make edits.
 
 ### `npm run build`
+Builds the app for production to the `build` folder. React is optimized for the best performance.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Deployment
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To deploy the application, follow these steps:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Build the frontend:
+```bash
+npm run build
+```
 
-### `npm run eject`
+2. Host the `build` folder on a web server or a cloud service like Netlify.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Deploy the backend to a hosting platform (e.g., Heroku, AWS).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Screenshots
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Homepage
+![Homepage](https://source.unsplash.com/800x400/?library,catalog)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Add Book Form
+![Add Book Form](https://source.unsplash.com/800x400/?book,add)
 
-## Learn More
+### Edit Book Form
+![Edit Book Form](https://source.unsplash.com/800x400/?book,edit)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Technologies Used
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Frontend**: React.js
+- **Backend**: Node.js, Express.js
+- **Database**: MySQL
+- **Styling**: CSS/Tailwind
 
-### Code Splitting
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+This project is licensed under the MIT License.
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Happy Coding!** 📚

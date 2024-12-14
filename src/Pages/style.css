@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+:root {
+    --form-bg: #fff;
+    --form-text-color: #333;
+    --form-shadow: rgba(0, 0, 0, 0.2);
+  }
+  
+  .app.dark {
+    --form-bg: #1e1e1e;
+    --form-text-color: #fff;
+    --form-shadow: rgba(255, 255, 255, 0.1);
+  }
+  
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 87vh;
+    font-family: 'Poppins', sans-serif;
+    color: var(--form-text-color);
+  }
+  
+  .form-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--form-text-color);
+    text-shadow: 2px 2px 5px var(--form-shadow);
+    font-family: "Miltonian Tattoo", serif;
+  }
+  
+  .form {
+    background: var(--form-bg);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px var(--form-shadow);
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  .form-input {
+    width: 90%;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+    color: var(--form-text-color);
+    background: var(--form-bg);
+  }
+  
+  .form-input:focus {
+    border-color: #fda085;
+    box-shadow: 0 0 8px rgba(253, 160, 133, 0.5);
+  }
+  
+  .form-button {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background: #fda085;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .form-button:hover {
+    background: #f6d365;
+  }
+  
+  .add-book-btn {
+    margin-top: 30px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #16a085;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .add-book-btn:hover {
+    background-color: #12876f;
+  }
+  
+  .link {
+    text-decoration: none;
+    color: #fff;
+  }
+  .navbar {
+    display: flex;
+    height:80px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--navbar-bg);
+    color: var(--text-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar .logo a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: var(--text-color);
+  }
+  .logo img{
+    width: 80px;
+    height: 80px;
+  }
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin-top: -50 !important;
+    padding: 0;
+    line-height: calc(80/29);
+  }
+  
+/* General button styles for nav-links */
+.nav-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-family: "Miltonian Tattoo", serif;
+    /*Modern,cleanfont*/font-weight: 600;
+    padding: 10px 20px;
+    border: 2px solid var(--text-color);
+    border-radius: 30px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+  
+  /* Hover animation */
+  .nav-link:hover {
+    background-color: var(--text-color); /* Swap text and background color */
+    color: var(--background-color); /* Dynamic for light and dark themes */
+    transform: scale(1.1); /* Slightly enlarge the button */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+  }
+  
+  /* Active state for the button */
+  .nav-link:active {
+    transform: scale(0.95); /* Slight compression on click */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  
+  .nav-link:hover {
+   
+  }
+  
+  .theme-toggle-btn {
+    background: none;
+    padding: 5px 10px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+  
+  .theme-toggle-btn:hover {
+    background-color: var(--text-color);
+    color: var(--navbar-bg);
+  }
+  :root {
+    --navbar-bg: #ffffff;
+    --text-color: #000000;
+    --background-color: #f8f9fa;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .app {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Dark theme variables */
+  .app.dark {
+    --navbar-bg: #333333;
+    --text-color: #ffffff;
+    --background-color: #121212;
+  }
+.update{
+    max-height: 88vh;
+}

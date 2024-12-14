@@ -1,0 +1,201 @@
+/* Root variables for themes */
+:root {
+  --background-light: #ffffff;
+  --text-light: #000000;
+  --card-bg-light: #f8f9fa;
+  --card-shadow-light: rgba(0, 0, 0, 0.2);
+
+  --background-dark: #121212;
+  --text-dark: #ffffff;
+  --card-bg-dark: #1e1e1e;
+  --card-shadow-dark: rgba(255, 255, 255, 0.1);
+
+  --primary: #3498db;
+  --primary-hover: #2980b9;
+  --success: #4caf50;
+  --success-hover: #3e8e41;
+  --danger: #f44336;
+  --danger-hover: #d32f2f;
+  --button-radius: 30px;
+}
+
+/* General container styles */
+.books-container {
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  background-color: var(--background-light);
+  color: var(--text-light);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.books-container.dark {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+}
+
+/* Title */
+.title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--text-light);
+  transition: color 0.3s;
+  font-family: "Miltonian Tattoo", serif;
+}
+
+.books-container.dark .title {
+  color: var(--text-dark);
+}
+
+/* Grid layout */
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Three items per row */
+  gap: 30px; /* Space between the cards */
+}
+
+
+/* Book card */
+.book-card {
+  position: relative;
+  padding: 15px;
+  border-radius: 20px;
+  background-color: var(--card-bg-light);
+  color: var(--text-light);
+  box-shadow: 4px 4px 8px var(--card-shadow-light);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.book-card.dark {
+  background-color: var(--card-bg-dark);
+  color: var(--text-dark);
+  box-shadow: 4px 4px 8px var(--card-shadow-dark);
+}
+
+.book-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 6px 6px 12px var(--card-shadow-light);
+}
+
+.book-card.dark:hover {
+  box-shadow: 6px 6px 12px var(--card-shadow-dark);
+}
+
+/* Book image container */
+.book-image-container {
+  position: relative;
+  height: 300px;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+}
+
+.book-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.book-desc{
+  margin-right: 20px;
+}
+.book-desc-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 15px;
+  text-align: center;
+  font-size: 0.9rem;
+  
+}
+
+.book-image-container:hover .book-desc-overlay {
+  opacity: 1;
+}
+
+/* Book title */
+.book-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 15px 0;
+  color: inherit; /* Uses text color from theme */
+  font-family: "Milonga", serif;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: auto;
+  padding: 10px 0;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--button-radius);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.update-btn {
+  background: linear-gradient(to right, #004d00, #66ff66);
+}
+
+.update-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+.delete-btn {
+  background-image: linear-gradient(to right, #8b0000, #ff6347);
+}
+
+.delete-btn:hover {
+  background-color: var(--danger-hover);
+}
+
+/* Add book button */
+.add-book-btn {
+  display: block;
+  margin: 30px auto;
+  padding: 12px 30px;
+  background-color: var(--success);
+  color: white;
+  border: none;
+  border-radius: var(--button-radius);
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-book-btn:hover {
+  background-color: var(--success-hover);
+  transform: scale(1.05);
+}
+
+/* Links inside buttons */
+.add-book-btn .link {
+  color: inherit;
+  text-decoration: none;
+}

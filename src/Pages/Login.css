@@ -1,0 +1,85 @@
+/* Styling for the Login/Register container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: -100px;
+  }
+  
+  /* Card-style layout for the form */
+  .login-card {
+   
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  /* Title styling */
+  .login-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  
+  /* Form input styling */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: start;
+    margin-left: 15px;
+  }
+  
+  .form-input {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  /* Button styling */
+  .form-button {
+    margin-top: 10px;
+    width: 95%;
+    padding: 12px;
+    background: linear-gradient(to right, #006400, #00FF00);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .form-button:hover {
+    background: linear-gradient(to right, #004d00, #66ff66);
+  }
+  
+  /* Toggle text and button */
+  .toggle-text {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .toggle-button {
+    background: none;
+    border: none;
+    color: #007BFF;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .toggle-button:hover {
+    text-decoration: underline;
+  }
+  
